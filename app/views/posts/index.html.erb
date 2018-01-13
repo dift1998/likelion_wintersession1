@@ -1,0 +1,7 @@
+<h1>게시판</h1>
+<%= link_to "새 글쓰기", "/posts/new"%>
+<div>
+	<% @post.each do |f|%>
+	<a href = "/posts/show/<%=f.id %>"><%= f.title %> </a></br>
+	<% end %>
+</div>

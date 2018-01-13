@@ -1,0 +1,9 @@
+<h1> 새 글쓰기 </h1>
+
+<%= form_tag("/posts/create", method: "post") do %>
+  <%= label_tag(:name, "제목:") %>
+  <%= text_field_tag(:title) %></br>
+  <%= label_tag(:name, "내용:") %>
+  <%= text_field_tag(:content) %></br>
+  <%= submit_tag ("저장")%>
+<% end %>

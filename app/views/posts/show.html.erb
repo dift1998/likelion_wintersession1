@@ -1,0 +1,19 @@
+<h1><%= @post.id %>번째 글</h1>
+<h2> 제목: <%= @post.title %> </h2>
+<h2> 내용: <%= @post.content %> </h2>
+</br>
+<hr>
+</br>
+<%= link_to "수정", controller: "posts", action: "edit", id: @post%>
+<%= link_to "삭제", controller: "posts", action: "destroy", id: @post%>
+<%= link_to "목록으로", "/posts/index"%>
+
+<h2>댓글</h2>
+
+<form action = '/posts/show/<%= @post.id%>/comments/create', method = 'post'>
+	<input type="text", name = "comment">
+	<input type = "submit">
+</form>
+<% @comment.each do |c| %>
+<%= c.content %>
+<% end %>
