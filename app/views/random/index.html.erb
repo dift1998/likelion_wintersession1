@@ -1,0 +1,7 @@
+<h1> 신이 나를 만들때 </h1>
+<%= image_tag ("http://t.wootza.com/assets/logo/logo_god.png")%>
+<%= form_tag("random/result", method: "get") do %>
+  <%= label_tag(:name, "이름:") %>
+  <%= text_field_tag(:name) %></br>
+  <%= submit_tag ("결과보기")%>
+<% end %>
